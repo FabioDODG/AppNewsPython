@@ -1,0 +1,32 @@
+{% extends 'base.html' %} <!-- Herda o layout principal do arquivo base.html -->
+
+{% block content %}
+<div class="containernews_details">
+    <div class="news-container-details">
+        <!-- Exibe o título da notícia -->
+        <h2>{{ news.title }}</h2>
+
+        <!-- Exibe a descrição completa da notícia -->
+        <p>{{ news.description }}</p>
+
+        <!-- Exibe o tipo da notícia -->
+        <h3>Tipo de notícia: {{ news.type }}</h3> 
+    </div>
+
+    <div class="botoes">
+        <!-- Botão para redirecionar para a edição da notícia -->
+        <a href="{{ url_for('edit_news', news_id=news_id) }}" class="btn">Editar Notícia</a>
+
+        <!-- Formulário para remover a notícia -->
+        <form action="{{ url_for('remove_news', news_id=news_id) }}" method="post" style="display:inline;">
+            <!-- Botão para enviar o formulário de remoção, com confirmação -->
+            <button type="submit" class="btn-remover_details" onclick="return confirm('Você tem certeza que deseja remover esta notícia?');">Remover Noticia</button>
+        </form>
+
+        <!-- Link para voltar à página inicial -->
+        <div>
+            <a href="{{ url_for('index') }}" class="btn">Voltar para Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

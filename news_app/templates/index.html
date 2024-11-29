@@ -1,0 +1,24 @@
+{% extends 'base.html' %} <!-- Herda o layout principal do arquivo base.html -->
+
+{% block content %}
+
+<div class="news-grid">
+    {% for index, news_item in news %} <!-- Itera sobre a lista de notícias -->
+    <div class="news-box">
+        <!-- Exibe o título da notícia, limitado a 25 caracteres -->
+        <h3 id="titulocard">{{ news_item.title[:25] }}</h3>
+        
+        <!-- Exibe a descrição da notícia, limitada a 208 caracteres -->
+        <div class="descricaonoticia">
+            <p>{{ news_item.description[:208] }}...</p>
+        </div>
+        
+        <!-- Link para visualizar mais detalhes sobre a notícia -->
+        <div class="vermais">
+            <a href="{{ url_for('news_detail', news_id=index) }}" class="btn">SAIBA MAIS</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,2082 @@
+/* Função em bloco para padronizar os botões:
+Início, Cadastrar, Remover, Editar
+Dentro do bloco, já tem as Media Querys para tamanhos de telas diferentes
+As funções, posteriormente são chamadas com o @include 'nome'();
+Fazendo com que todos os botões que eu atribua o @include sejam padronizados
+*/
+
+@mixin botoes{  
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 60px;
+    background-color: #c6c6c6;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bolder;
+    border: none;
+    &:hover{
+        background-color: #888888;
+    } 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @media screen and (min-width: 900px) and (max-width: 1440px) {
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        font-size: 14px;
+        margin: 10px;
+        padding: 10px 15px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    @media screen and (min-width: 360px) and (max-width: 640px) {
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        margin: 10px;
+        padding: 5px 20px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 400px) {
+        width: 80px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        font-size: 12px;
+        margin: 10px;
+        padding: 2px 5px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}
+
+/* Função em bloco para padronizar os botões:
+Salvar
+Dentro do bloco, já tem as Media Querys para tamanhos de telas diferentes
+As funções, posteriormente são chamadas com o @include 'nome'();
+Fazendo com que todos os botões que eu atribua o @include sejam padronizados
+*/
+
+@mixin botoesSalvar {
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    padding: 10px 55px;
+    background-color: #c6c6c6;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bolder;;
+    &:hover{
+        background-color: #888888;
+    } 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @media screen and (min-width: 900px) and (max-width: 1440px) {
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        font-size: 14px;
+        margin: 10px auto;
+        padding: 10px 15px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    @media screen and (min-width: 414px) and (max-width: 896px)  {
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        font-size: 14px;
+        margin: 10px auto;
+        padding: 10px 15px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }  
+
+    @media screen and (min-width: 360px) and (max-width: 640px) {
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        font-size: 14px;
+        margin: 10px auto;
+        padding: 5px 10px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 400px) {
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        font-size: 12px;
+        margin: 10px auto;
+        padding: 5px 10px;
+        background-color: #c6c6c6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bolder;
+        border: none;
+        &:hover{
+            background-color: #888888;
+        } 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}
+
+/* Função em bloco para padronizar os selects
+Dentro do bloco, já tem as Media Querys para tamanhos de telas diferentes
+As funções, posteriormente são chamadas com o @include 'nome'();
+Fazendo com que todos os selects que eu atribua o @include sejam padronizados
+*/
+
+@mixin selects{
+    margin: auto;
+    width: 220px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 2px;
+    font-size: 20px;
+
+    @media screen and (360px <= width <= 640px){
+        width: 100px;
+        height:auto;
+    }
+    
+    @media screen and (200px <= width <= 400px) {
+        margin: auto;
+        width: 90px;
+        height:auto;
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+/* Começo página principal */
+
+/* Corpo da página com cor meramente semelhante ao branco*/
+
+body {
+    background-color: #dedede;
+}
+
+/* Menu hambúrger foi feito para Media Querys de: 360px à 640px / 200px à 400px 
+Por isso, apenas dentro dessas Medias Querys é possível visualizar o menu
+*/
+
+#menu-hamburger {
+    position: fixed;
+    top: 10px;
+    left: -50px;
+    cursor: pointer;
+    z-index: 1000; /* Para garantir que o menu hamburger esteja acima do header */
+    display: block; /* Exibe o menu hamburger */
+
+    .hamburger{
+        width: 1px;
+        height: 1px;
+    }
+}
+
+/* Header com logo, botão de cadastrar notícia, botão de cadastrar categoria e campo de busca
+O header nas Media Querys de: 360px à 640px / 200px à 400px ficam embutidas dentro do menu Hambúrguer
+*/
+header {
+    border-bottom: 1px solid #000000;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #888888;
+    z-index: 999;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+        list-style-type: none;
+        margin: 10px auto;
+        width: 70%;
+        #imagem_logo {
+            width: 350px;
+            margin-right: 20px;
+            .logo {
+                width: 320px;
+                height: auto;
+                box-shadow: 0 4px 8px rgb(119, 119, 119);
+                border: 2px solid #767676;
+                margin: 2px 2px;
+                background-color: #000;
+            }
+            img:hover {
+                box-shadow: 0 4px 8px rgb(255, 255, 255);
+            }
+        }
+        .btn-cadastrar {
+            width: auto;
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: #888888;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-cadastrar:hover {
+            background-color: #c6c6c6;
+        }
+        #buscas {
+            align-items: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            align-self: center;
+            .input-container {
+                position: relative;
+                display: inline-block;
+            }
+            input[type="text"] {
+                width: 300px;
+                padding: 10px 40px 10px 20px;
+                border: 1px solid #000000;
+                border-radius: 18px;
+                font-size: 16px;
+                background-color: #c6c6c6;
+            }
+            .btn-busca {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                /* ajuste a posição da lupa */
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+            .lupa {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+/* Todos os conteúdos de todas as páginas aparecem dentro do main-content*/
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1800px;
+    margin: 70px auto;
+    padding: 80px;
+    .news-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 100px;
+        width: 1400px;
+    }
+    .news-box {
+        border: 1px solid #000;
+        border-radius: 1px;
+        margin: 0px 10px 40px 10px;
+        width: 400px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        text-align: center;
+        height: 420px;
+        background-color: #fff;
+        &:hover {
+            transform: scale(1.05);
+            background-color: #ddd;
+            box-shadow: 0 8px 16px rgb(0, 0, 0);
+        }
+        #titulocard {
+            height: 50px;
+            margin-top: 25px;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+        .descricaonoticia {
+            height: 200px;
+            margin: 5px 40px;
+            text-align: justify;
+            p{
+                font-size: 22px;
+            }
+        }
+        .vermais {
+            margin: 50px auto;
+            align-items: center;
+            margin-bottom: 0px;
+            .btn {
+                display: inline-block;
+                font-size: 16px;
+                margin-bottom: 10px;
+                padding: 5px 60px;
+                background-color: #c6c6c6;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                border-radius: 12px;
+                font-weight: bolder;;
+                &:hover{
+                    background-color: #888888;
+                } 
+            }
+        }
+    }
+    .containernews {
+        width: 1000px;
+        max-height: 700px;
+        margin: 5px auto 25px;
+        padding: 20px;
+        border: 0px solid #000;
+        border-radius: 30px;
+        box-shadow: 8px 15px 18px rgba(0, 0, 0, 0.71);
+        text-align: center;
+        .news-container {
+            width: 850px;
+            height: 400px;
+            max-height: 600px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            overflow-y: auto;
+        }
+    }
+}
+
+/* Aqui é o final de todas as páginas, onde possui o Link para meu Portflólio do GitHub*/
+footer {
+    background-color: #888888;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    p{
+        margin-top: 35px;
+    }
+    a {
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold ;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+}
+/* Final da página principal */
+
+
+/* Começo da página cadastrar tipos de notícias */
+
+/* Modal onde são feitos os cadastros de tipos de notícias*/
+.form-container_types {
+    width: 1400px;
+    height: auto;
+    max-height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 10px auto 50px auto;
+    box-shadow: 0 8px 18px rgb(0, 0, 0);
+    h2{
+        font-size: 30px;
+    }
+    .formulario_tipo_noticia {
+        label {
+            font-size: 24px;
+        }
+        #new_type {
+            height: 24px;
+            text-align: center;
+            width: 250px;
+        }
+        .btn {
+            @include botoes();
+        }
+    }
+    .container_existentes {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            height: auto;
+            max-height: 100%;
+            li {
+                margin-top: -15px;
+                font-size: 24px;
+                padding: 8px 15px;
+                align-items: right;
+                list-style-type: none;
+                #text{
+                    margin-left: 5px;
+                }
+            }
+            .btn {
+               border: none;
+               @include botoes();
+            }
+        }
+    }
+    .btn {
+       @include botoes();
+    }
+}
+/* Final da página cadastrar tipos de notícias */
+
+/* Começo da página cadastrar notícias */
+
+/* Modal onde são feitos os cadastros das notícias*/
+.form-container_noticias {
+    width: 800px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 30px;
+    margin: 10px auto 30px auto;
+    box-shadow: 0 8px 18px rgb(0, 0, 0);
+    h2{
+        font-size: 30px;
+    }
+    .inputs_cadastro {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin: 0px auto 0px;
+        align-items: center;
+        .titulo_select{
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 24px;
+            margin: 5px;
+        }
+        #title {
+            height: 24px;
+            width: 250px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        .labelSelect{
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        select {
+            @include selects();
+        }
+        #label_descricao {
+            margin: 20px auto 5px auto;
+        }
+        #description_add {
+            width: 400px;
+            height: 200px;
+            font-size: 18px;
+        }
+        .botaoSalvar{
+            margin-top: 30px;
+            display: flex;
+            width: 180px;
+        
+            .btn {
+                @include botoesSalvar();
+            }
+        }
+    }
+    .btn {
+        @include botoes();
+     }
+}
+/* Final da página cadastrar notícias */
+
+/* Começo da página news detail */
+/* Modal onde são exibidos os detalhes das notícias*/
+.containernews_details {
+    width: 1200px;
+    height: auto;
+    margin: 5px auto 25px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border: 0px solid #000;
+    border-radius: 30px;
+    box-shadow: 8px 15px 18px rgba(0, 0, 0);
+    .news-container-details {
+        width: 850px;
+        height: auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        margin: 20px auto 10px auto;
+        overflow-y: auto;
+        h2{
+            font-size: 26px;
+        }
+        
+        #descricao{
+            font-size: 22px;
+        }
+
+        h3{
+            font-size: 24px;
+        }
+    }
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        @include botoes();
+    }
+    button {
+        border: none;
+        @include botoes();
+    }
+}
+/* Final da página news detail */
+
+/* Começo da página edit news */
+/* Modal onde são feitas as edições das notícias*/
+.editnews {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 740px;
+    height: auto;
+    margin: auto auto 50px auto;
+    border: 0px solid #000;
+    border-radius: 30px;
+    box-shadow: 8px 15px 18px rgba(0, 0, 0);
+    .formulario_edicao {
+        margin: 10px auto 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #titulo_descricao {
+            font-size: 20px;
+            margin: 15px auto 5px;
+        }
+        #label_descricao{
+            font-size: 20px;
+            margin: 15px auto 5px;
+        }
+        #description_edit {
+            margin: auto;
+            font-size: 16px;
+            width: 480px;
+            height: 200px;
+            margin: 5px;
+        }
+        select {
+            margin-top: 5px;
+            @include selects();
+        }
+        .btn {
+            @include botoesSalvar();
+        }
+    }
+    .btn {
+        margin-top: -25px;
+        @include botoes();
+    }
+}
+/* Final da página edit news */
+
+/* COMEÇO DAS MEDIA QUERYS 
+Ajuste para responsividade do site, onde os elementos do site se ajustam
+ao tamanho de diferentes dispositivos, tornando a navegação para todos
+intuitiva e amigável
+*/
+
+/* Redimensionamento de cada item dentro do WebService somente
+Para dispositivos com telas de tamanho dentre 1080px e 1920px*/
+@media screen and (min-width: 1080px) and (max-width: 1920px){
+    body {
+        background-color: #dedede;
+    }
+    #menu-hamburger {
+        position: fixed;
+        top: 10px;
+        left: -50px;
+        cursor: pointer;
+        z-index: 1000; /* Para garantir que o menu hamburger esteja acima do header */
+        display: block; /* Exibe o menu hamburger */
+        .hamburger{
+            width: 1px;
+            height: 1px;
+        }
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 90px;
+        ul {
+            width: 80%;
+            #imagem_logo {
+                width: 250px;
+                .logo {
+                    width: 230px;
+                }
+            }
+            .btn-cadastrar {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-weight: bold;
+                margin: 0px 15px;
+                padding: 8px 18px; // Reduzido de 10px 20px para 8px 18px
+                font-size: 20px; // Reduzido de 20px para 18px
+            }
+            #buscas {
+                align-items: center;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                align-self: center;
+                .input-container {
+                    position: relative;
+                    display: inline-block;
+                }
+                input[type="text"] {
+                    width: 190px;
+                    padding: 10px 40px 10px 20px;
+                    /* espaço para a lupa */
+                    border: 1px solid #000000;
+                    border-radius: 18px;
+                    font-size: 16px;
+                    background-color: #c6c6c6;
+                }
+                .btn-busca {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
+                .lupa {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .main-content {
+        margin: 100px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 1700px;
+        padding: 30px;
+        .news-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 1200px;
+        }
+        .news-box {
+            width: 350px;
+            height: 400px;
+            #titulocard {
+                height: 24px;
+                margin-top: 20px;
+                font-size: 22px;
+            }
+            .descricaonoticia {
+                height: 200px;
+                margin: 2px 20px;
+            }
+            .vermais .btn {
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 20px;
+                padding: 5px 60px;
+                background-color: #c6c6c6;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                border-radius: 12px;
+                font-weight: bolder;;
+            }
+        }
+        .containernews {
+            width: 850px;
+            .news-container {
+                width: 750px;
+            }
+        }
+    }
+    footer {
+        background-color: #888888;
+        color: #000000;
+        text-align: center;
+        font-size: 20px;
+        height: 60px;
+        position: fixed;
+        width: 100%;
+        padding-top: 10px;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        z-index: 888;
+    }
+    .form-container_types {
+        margin: 20px auto;
+        width: 800;
+        padding: 8px;
+        .formulario_tipo_noticia{
+            label {
+                font-size: 22px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                height: auto;
+            }
+        }
+    }
+    .form-container_noticias {
+        width: 800px;
+        .inputs_cadastro {
+            width: 500px;
+            .titulo_select{
+                display: flex;
+                flex-direction: column;
+                label {
+                    margin: 5px auto;
+                    font-size: 22px; // Reduzido de 20px para 18px
+                }
+                #title {
+                    font-size: 16px;;
+                    margin: 2px auto;
+                }
+                .labelSelect {
+                    margin: 15px auto 5px auto;
+                }
+                #news_type {
+                    margin: 2px auto 15px auto;
+                }
+            }
+            #label_descricao {
+                margin: 10px auto;
+            }
+            #description_add {
+                width: 450px; // Reduzido de 400px para 350px
+                height: 220px; // Reduzido de 200px para 180px
+                font-size: 14px; // Reduzido de 16px para 14px
+            }
+            .botaoSalvar {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                margin: 20px auto 10px auto;
+                .btn {
+                    @include botoesSalvar();
+                }
+            }
+        }
+    }
+    .containernews_details {
+        width: 880px;
+        .news-container-details {
+            width: 700px;
+        }
+    }
+    .editnews {
+        width: 800px;
+        height: auto;
+        .formulario_edicao {
+            #label_descricao {
+                font-size: 20px;
+                margin: 30px auto 10px auto;
+            }
+            #description_edit {
+                margin: 5px auto;
+                width: 480px; // Reduzido de 480px para 420px
+                height: 180px; // Reduzido de 200px para 180px
+                font-size: 14px; // Reduzido de 16px para 14px
+            }
+            #titulo_descricao {
+                font-size: 20px;
+                margin: 10px auto 5px auto;
+            }
+        }
+    }
+}
+
+/* Redimensionamento de cada item dentro do WebService somente
+Para dispositivos com telas de tamanho dentre 900px e 1440px*/
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+    body {
+        background-color: #dedede;
+    }
+#menu-hamburger {
+    position: fixed;
+    top: 10px;
+    left: -50px;
+    cursor: pointer;
+    z-index: 1000;
+    display: block;
+    .hamburger{
+        width: 1px;
+        height: 1px;
+    }
+}
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 90px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            margin-left: 35px;
+            #imagem_logo {
+                width: 190px;
+                .logo {
+                    width: 190px;
+                }
+            }
+            .btn-cadastrar {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 0px 15px;
+                padding: 8px 18px;
+                font-size: 16px;
+            }
+            #buscas {
+                align-items: center;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                align-self: center;
+                .input-container {
+                    position: relative;
+                    display: inline-block;
+                }
+                input[type="text"] {
+                    width: 100px;
+                    padding: 10px 40px 10px 20px;
+                    border: 1px solid #000000;
+                    border-radius: 18px;
+                    font-size: 16px;
+                    background-color: #c6c6c6;
+                }
+                .btn-busca {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
+                .lupa {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .main-content {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 840px;
+        padding: 30px;
+        .news-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 780px;
+        }
+        .news-box {
+            width: 260px;
+            height: 290px;
+            #titulocard {
+                height: 24px;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                font-size: 20px;
+            }
+            .descricaonoticia {
+                height: 130px;
+                margin: 2px 20px; 
+                p{
+                    font-size: 16px;
+                }
+            }
+            .vermais .btn {
+                margin-top: 15px;
+                padding: 5px 50px;
+                font-size: 14px;
+            }
+        }
+        .containernews {
+            width: 850px;
+            .news-container {
+                width: 750px;
+            }
+        }
+    }
+    footer {
+        background-color: #888888;
+        color: #000000;
+        text-align: center;
+        font-size: 20px;
+        height: 60px;
+        position: fixed;
+        width: 100%;
+        padding-top: 10px;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        z-index: 1000;
+        p {
+            margin-top: 15px;
+        }
+    }
+    .form-container_types {
+        margin: 20px auto;
+        width: 600;
+        padding: 8px;
+        .formulario_tipo_noticia{
+            label {
+                font-size: 18px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                height: auto;
+            }
+        }
+    }
+    .form-container_noticias {
+        width: 600px;
+        .inputs_cadastro {
+            width: 500px;
+            .titulo_select{
+                display: flex;
+                flex-direction: column;
+                font-size: 18px;
+                label {
+                    margin: 5px auto;
+                    font-size: 22px;
+                }
+                #title {
+                    margin: 2px auto;
+                    font-size: 22px;
+                }
+                .labelSelect {
+                    margin: 15px auto 5px auto;
+                }
+                #news_type {
+                    margin: 2px auto 15px auto;
+                }
+            }
+            #label_descricao {
+                margin: 10px auto;
+            }
+            #description_add {
+                width: 450px;
+                height: 220px;
+                font-size: 14px;
+            }
+            .botaoSalvar {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                margin: 20px auto 10px auto;
+                .btn {
+                    @include botoesSalvar();
+                }
+            }
+        }
+    }
+    .containernews_details {
+        width: 600px; 
+        .news-container-details {
+            width: 560px; 
+            #descircao {
+                font-size: 16px;
+            }
+        }
+    }
+    .editnews {
+        margin-top: 20px;
+        width: 600px;
+        .formulario_edicao {
+            #label_descricao {
+                font-size: 20px;
+                margin: 30px auto 10px auto;
+            }
+            #description_edit {
+                margin: 5px auto;
+                width: 420px;
+                height: 180px;
+                font-size: 14px;
+            }
+            #titulo_descricao {
+                font-size: 20px;
+                margin: 10px auto 5px auto;
+            }
+        }
+    }
+}
+
+/* Redimensionamento de cada item dentro do WebService somente
+Para dispositivos com telas de tamanho dentre 414px e 900px*/
+@media screen and (min-width: 414px) and (max-width: 900px) {
+    body {
+        background-color: #dedede;
+    }
+    #menu-hamburger {
+        position: fixed;
+        top: 10px;
+        left: -50px;
+        cursor: pointer;
+        z-index: 1000;
+        display: block;
+        .hamburger{
+            width: 1px;
+            height: 1px;
+        }
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #888888;
+        z-index: 999;
+        height: auto;
+        align-items: center;
+        ul {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-left: 60px;
+            li {
+                width: auto;
+                padding: -10px;
+            }
+            #imagem_logo {
+                width: 190px; 
+                margin-right: 10px;
+                .logo {
+                    width: 190px;
+                }
+            }
+            .btn-cadastrar {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                width: 100%;
+                font-size: 16px;
+                margin-top: 5px;
+                padding: 8px 5px;
+            }
+            #buscas {
+                .input-container {
+                    position: relative;
+                    display: inline-block;
+                }
+                input[type="text"] {
+                    width: 180px;
+                    margin: 20px 15px 5px 15px;
+                    padding: 8px 15px 8px 8px;
+                    font-size: 14px;
+                }
+                .lupa {
+                    width: 20px;
+                    height: 20px;
+                    margin: 18px 10px 0px 0px;
+                }
+            }
+        }
+    }
+    .main-content {
+        margin: 20px auto 80px auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        .news-grid {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            margin:  10px auto;
+        }
+        .news-box {
+            margin: 20px auto;
+            width: 210px;
+            height: 290px;
+            #titulocard {
+                margin-top: 5px;
+                font-size: 18px; 
+                height: 24px;
+            }
+            .descricaonoticia {
+                height: 190px;
+                margin: 8px 12px;
+                p{
+                    font-size: 16px;
+                }
+            }
+            .vermais {
+                margin-top: 0px;
+                .btn {
+                    margin-top: 8px;
+                    padding: 5px 40px;
+                    font-size: 12px;
+                }
+            }
+        }
+        .containernews {
+            width: 350px;
+            .news-container {
+                width: 300px;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 990px;
+        font-size: 16px; 
+        height: 60px; 
+        p{
+            margin-top: 18px;
+        }
+    }
+    .form-container_types {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 80px auto 20px auto;
+        width: 380px;
+        padding: 6px;
+        .formulario_tipo_noticia{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #new_type{
+                height: 18px;
+                margin-top: 5px;
+            }
+            label {
+                font-size: 16px; // Reduzido de 18px para 16px
+            }
+            .btn {
+                @include botoes();
+            }
+        }
+        .container_existentes {
+            display: flex;
+            justify-content: center;
+            ul {
+                margin: 0px auto 0px -28px;
+                width: 250px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                li{
+                    width: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    .btn {
+                        @include botoes();
+                    }
+                }
+            }
+        }
+        .botoes{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            .btn {
+                @include botoes();
+            }
+        }
+    }
+    .form-container_noticias {
+        margin: 80px auto 20px auto;
+        width: 380px;
+        .inputs_cadastro {
+            width: 320px;
+            .titulo_select{
+                display: flex;
+                flex-direction: column;
+                label {
+                    margin: 5px auto;
+                    font-size: 18px;
+                }
+                #title {
+                    margin: 2px auto;
+                }
+                select{
+                    height: 26px;
+                    font-size: 14px;
+                }
+                .labelSelect {
+                    margin: 15px auto 5px auto;
+                }
+                #news_type {
+                    margin: 2px auto 15px auto;
+                }
+            }
+            #label_descricao {
+                margin: 10px auto;
+            }
+            #description_add {
+                width: 250px;
+                height: 160px;
+                font-size: 14px;
+            }
+            .botaoSalvar {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                margin: 20px auto 10px auto;
+                .btn {
+                    @include botoesSalvar();
+                }
+            }
+        }
+    }
+    .containernews_details {
+        margin: 80px auto 20px auto;
+        width: 320px;
+        .news-container-details{
+            width: 300px; 
+            h2{
+                font-size: 20px;
+            }
+            #descricao{
+                font-size: 16px;
+            }
+            h3{
+                font-size: 18px;
+            }
+        }
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .btn{
+                @include botoes();
+            }
+        }            
+    }
+    .editnews {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 80px auto 20px auto;
+        width: 380px;
+        h2{
+            margin-bottom: 0px;
+        }
+        .formulario_edicao {
+            margin-top: 5px;
+            #label_descricao {
+                font-size: 20px;
+                margin: 25px auto 10px auto;
+            }
+            #description_edit {
+                margin: 5px auto;
+                width: 140px;
+                height: 160px;
+                font-size: 14px;
+                text-align: justify;
+            }
+            #titulo_descricao {
+                font-size: 20px;
+                margin: 10px auto 5px auto;
+            }
+            #news_type{
+                height: 24px;
+                font-size: 14px;
+            }
+        }
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            .btn {
+                @include botoes();
+            }
+        }
+    }
+}
+
+/* Redimensionamento de cada item dentro do WebService somente
+Para dispositivos com telas de tamanho dentre 360px e 640px
+A partir deste tamanho de tela, o header fica escondido dentro do menu Hambúrguer
+*/
+@media screen and (min-width: 360px) and (max-width: 640px) {
+    body {
+        background-color: #dedede;
+    }
+    #menu-hamburger {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        z-index: 1000;
+        display: block;
+        .hamburger{
+            width: 20px;
+            height: auto;
+        }
+    }
+    header {
+        border-bottom: 1px solid #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        background-color: #888888b2;
+        border-bottom-right-radius: 12px;
+        z-index: 999;
+        height: auto;
+        justify-content: center;
+        display: none; 
+        margin-bottom: 5px;
+        ul {
+            align-items: center;
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            width: 210px;
+            margin: 45px 0px 0px -50px;
+            li {
+                width: auto;
+                padding: -10px;
+            }
+            #imagem_logo {
+                width: 160px; 
+                margin-right: 10px;
+                .logo {
+                    width: 160px;
+                }
+            }
+            .btn-cadastrar {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                width: 100%;
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 5px;
+                padding: 8px 5px;
+            }
+            #buscas {
+                .input-container {
+                    position: relative;
+                    display: inline-block;
+                }
+                input[type="text"] {
+                    width: 120px;
+                    margin: 20px 15px 5px 15px;
+                    padding: 8px 15px 8px 8px;
+                    font-size: 14px;
+                }
+                .lupa {
+                    width: 20px;
+                    height: 20px;
+                    margin: 18px 10px 0px 0px;
+                }
+            }
+        }
+    }
+    .main-content {
+        margin: 0 auto 20px auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        box-sizing: border-box;
+        .news-grid {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            margin:  0px auto;
+        }
+        .news-box {
+            margin: 20px auto;
+            width: 210px;
+            height: 290px;
+            #titulocard {
+                margin-top: 5px;
+                font-size: 18px; 
+                height: 24px;
+            }
+            .descricaonoticia {
+                margin: 8px 12px; 
+                height: 150px;
+                p{
+                    font-size: 14px;
+                }
+            }
+            .vermais {
+                margin-top: 0px;
+                .btn {
+                    margin-top: 8px;
+                    padding: 5px 40px;
+                    font-size: 12px;
+                }
+            }
+        }
+        .containernews {
+            width: 350px;
+            .news-container {
+                width: 300px;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        height: 60px;
+        p {
+            margin-top: 30px;
+        }
+    }
+    .form-container_types {
+        margin-top: 5px;
+        width: 380px;
+        padding: 6px;
+        label {
+            font-size: 12px;
+        }
+        h2, h3{
+            font-size: 20px;
+        }
+        .formulario_tipo_noticia{
+            #new_type{
+                height: 20px;
+                width: 120px;
+            }
+            label{
+                font-size: 16px;
+            }
+        }
+        .container_existentes {
+            display: flex;
+            justify-content: center;
+            ul {
+                margin: 0px auto 0px -28px;
+                width: 250px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                li{
+                    width: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .form-container_noticias {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        width: 380px;
+        h2{
+            font-size: 20PX;
+        }
+        .inputs_cadastro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 320px;
+            .titulo_select{
+                display: flex;
+                flex-direction: column;
+                label {
+                    margin: 5px auto;
+                    font-size: 18px;
+                }
+                #title {
+                    margin: 2px auto;
+                    width: 120px;
+                    height: 20px;
+                }
+                .labelSelect {
+                    margin: 15px auto 5px auto;
+                }
+                #news_type {
+                    margin: 2px auto 15px auto;
+                }
+            }
+            #label_descricao {
+                margin: 10px auto;
+                font-size: 18px;
+            }
+            #description_add {
+                width: 250px;
+                height: 160px;
+                font-size: 14px;
+            }
+            .botaoSalvar {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: 20px auto 10px auto;
+                .btn {
+                    @include botoesSalvar();
+                }
+            }
+        }
+    }
+    .containernews_details {
+        margin-top: 0px;
+        width: 340px; 
+        .news-container-details {
+            width: 280px;
+            h2{
+                margin-top: 0px;
+                font-size: 20px;
+            }
+            #descricao{
+                font-size: 15px;
+            }
+            .botoes {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .btn {
+                    @include botoes();
+                }
+            }
+        }
+    }
+    .editnews {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 10px;
+        width: 340px;
+        .formulario_edicao {
+            #label_descricao {
+                font-size: 16px;
+                margin: 10px;
+            }
+            #description_edit {
+                margin: 5px 10px;
+                width: 230px;
+                height: 160px;
+                font-size: 14px;
+                text-align: justify;
+            }
+            #titulo_descricao {
+                font-size: 20px;
+                margin: 5px auto 5px auto;
+            }
+            #news_type{
+                width: 100px;
+            }
+        }
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            .btn {
+                @include botoes();
+            }
+        }
+    }
+}
+
+/* Redimensionamento de cada item dentro do WebService somente
+Para dispositivos com telas de tamanho dentre 360px e 640px
+O header fica escondido dentro do menu Hambúrguer
+*/
+@media screen and (min-width: 200px) and (max-width: 400px) {
+    body {
+        background-color: #dedede;
+    }
+    #menu-hamburger {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        z-index: 1000;
+        display: block;
+        .hamburger{
+            width: 10px;
+            height: auto;
+        }
+    }
+    header {
+        border-bottom: 1px solid #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 120px;
+        background-color: #888888b2;
+        border-bottom-right-radius: 12px;
+        z-index: 999;
+        height: auto;
+        justify-content: center;
+        display: none; 
+        margin-bottom: 5px;
+    ul {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 140px;
+        margin: 45px 0px 0px -50px;
+        li {
+            width: auto;
+            padding: -10px;
+        }
+        #imagem_logo {
+            width: 90px; 
+            margin-right: 10px;
+            .logo {
+                width: 90px;
+            }
+        }
+        .btn-cadastrar {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 50%;
+            font-size: 8px;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-left: 30px;
+            padding: 8px 5px;
+        }
+        #buscas {
+            .input-container {
+                position: relative;
+                display: inline-block;
+            }
+            input[type="text"] {
+                width: 70px;
+                height: 14px;
+                margin: 20px 15px 5px 15px;
+                padding: 8px 15px 8px 8px;
+                font-size: 14px;
+            }
+            .lupa {
+                width: 20px;
+                height: 20px;
+                margin: 18px 10px 0px 0px;
+            }
+        }
+    }
+    }
+    .main-content {
+        margin: 0 auto 10px auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        box-sizing: border-box;
+        .news-grid {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            margin:  0px auto;
+        }
+        .news-box {
+            margin: 0px auto 15px auto;
+            width: 150px;
+            height: 220px;
+            #titulocard {
+                margin-top: 10px;
+                font-size: 12px; 
+                height: 20px;
+            }
+            .descricaonoticia {
+                margin: 15px 12px; 
+                height: 120px;
+                p{
+                    font-size: 10px;
+                }
+            }
+            .vermais {
+                margin-top: 0px;
+                .btn {
+                    margin-top: 5px;
+                    padding: 5px 40px;
+                    font-size: 8px;
+                }
+            }
+        }
+        .containernews {
+            width: 350px;
+            .news-container {
+                width: 300px;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        height: 40px;
+        p{
+            margin-bottom: 30px;
+            font-size: 10px;
+        }
+    }
+    .form-container_types {
+        margin-top: 0px;
+        width: 180px;
+        padding: 6px;
+        label {
+            font-size: 12px;
+        }
+        h2, h3{
+            font-size: 18px;
+        }
+        .formulario_tipo_noticia{
+            #new_type{
+                height: 14px;
+                width: 80px;
+            }
+            label{
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+        }
+        .container_existentes {
+            display: flex;
+            justify-content: center;
+            ul {
+                margin: 0px auto 0px -20px;
+                width: 150px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                align-items: center;
+                li{
+                    margin-left: 8px;
+                    width: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .form-container_noticias {
+        margin-top: 0px;
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 16px;
+        }
+        .inputs_cadastro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            .titulo_select{
+                display: flex;
+                flex-direction: column;
+                label {
+                    margin: 5px auto;
+                    font-size: 14px;
+                }
+                #title {
+                    margin: 2px auto;
+                    width: 100px;
+                    height: 14px;
+                }
+                .labelSelect {
+                    margin: 15px auto 5px auto;
+                }
+            }
+            #label_descricao {
+                margin: 10px auto;
+                font-size: 14px;
+            }
+            #description_add {
+                width: 140px;
+                height: 130px;
+                font-size: 12px;
+            }
+            .botaoSalvar {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 10px auto 10px auto;
+                margin-right: 10px;
+                .btn {
+                    @include botoesSalvar();
+                }
+            }
+        }
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            .btn {
+                @include botoes();
+            }
+        }
+    }
+    .containernews_details {
+        margin-top: 0px;
+        width: 280px; 
+        .news-container-details {
+            text-align: center;
+            margin-left: -10px;
+            h2{
+                margin-top: 0px;
+                font-size: 16px;
+            }
+            h3{
+                font-size: 14px;
+            }
+            width: 210px;
+            #descricao{
+                font-size: 12px;
+            }
+        }
+        .botoes{
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .editnews {
+        margin-top: 5px;
+        width: 340px;
+        .formulario_edicao {
+            #label_descricao {
+                font-size: 16px;
+                margin: 10px auto 10px auto;
+            }
+            #description_edit {
+                margin: 5px 10px;
+                width: 150px;
+                height: 160px;
+                font-size: 14px;
+                text-align: justify;
+            }
+            #titulo_descricao {
+                font-size: 16px;
+                margin: 5px auto 5px auto;
+            }
+            #news_type{
+                width: 100px;
+            }
+            
+        }
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            .btn {
+                @include botoes();
+            }
+        }
+    }
+}
+/*  FIM DA MEDIA QUERYS */

@@ -1,0 +1,35 @@
+{% extends 'base.html' %} <!-- Herda o layout principal do arquivo base.html -->
+
+{% block content %}
+<div class="editnews">
+    <h2>Editar Notícia</h2> <!-- Título do formulário de edição -->
+    <form action="" method="post" class="formulario_edicao"> <!-- Formulário para edição da notícia -->
+        <!-- Campo de entrada para o título da notícia -->
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" value="{{ news.title }}" required>
+        <br><br>
+        
+        <!-- Campo de entrada para a descrição da notícia -->
+        <label for="description">Descrição:</label>
+        <textarea id="description_edit" name="description" required>{{ news.description }}</textarea>
+        <br><br>
+        
+        <!-- Dropdown para selecionar o tipo de notícia -->
+        <label for="news_type">Tipo de Notícia:</label>
+        <select id="news_type" name="news_type" required>
+            {% for type in news_types %}
+                <!-- Marca a categoria da notícia como selecionada se for igual ao tipo atual -->
+                <option value="{{ type }}" {% if news.type == type %}selected{% endif %}>{{ type }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        
+        <!-- Botão para salvar as alterações -->
+        <button type="submit" class="btn">Salvar Alterações</button>
+    </form>
+    <!-- Botão de voltar para a página inicial -->
+    <div>
+        <a href="{{ url_for('index') }}" class="btn">Voltar home</a>
+    </div>
+</div>
+{% endblock %}

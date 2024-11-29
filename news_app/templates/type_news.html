@@ -1,0 +1,37 @@
+{% extends 'base.html' %} <!-- Herda o layout principal do arquivo base.html -->
+
+{% block content %}
+<div class="form-container_types">
+    <h2>Cadastrar Categoria de Notícia</h2> <!-- Título do formulário para cadastrar uma nova categoria -->
+    
+    <form action="{{ url_for('type_news') }}" method="post" class="formulario_tipo_noticia"> <!-- Formulário para cadastrar uma nova categoria -->
+        <!-- Campo de entrada para o nome da nova categoria -->
+        <label for="new_type">Digite a nova categoria de notícia:</label>
+        <input type="text" id="new_type" name="new_type" placeholder="Categoria" required>
+        
+        <!-- Botão para submeter o formulário -->
+        <button type="submit" class="btn">Cadastrar Tipo</button>
+    </form>
+
+    <h2>Tipos de Notícia Existentes</h2> <!-- Título para exibição das categorias existentes -->
+    <div class="container_existentes">
+        <ul>
+            {% for type in news_types %} <!-- Itera pelas categorias de notícia existentes -->
+                <li>
+                    {{ type }} <!-- Exibe o nome da categoria -->
+                    <!-- Formulário para remover a categoria -->
+                    <form action="{{ url_for('remove_news_type') }}" method="post" style="display:inline;">
+                        <input type="hidden" name="news_type" value="{{ type }}"> <!-- Campo oculto com o valor da categoria -->
+                        <button type="submit" class="btn">Remover</button> <!-- Botão para enviar o formulário de remoção -->
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Link para voltar à página inicial -->
+    <div>
+        <a href="{{ url_for('index') }}" class="btn">Voltar para home</a>
+    </div>
+</div>
+{% endblock %}

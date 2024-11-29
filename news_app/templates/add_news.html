@@ -1,0 +1,40 @@
+{% extends 'base.html' %} <!-- Herda a estrutura do arquivo base.html -->
+
+{% block content %}
+<div class="form-container_noticias">
+    <!-- Título do formulário de cadastro -->
+    <h2>Cadastrar Notícia</h2>
+    <!-- Formulário para cadastro de notícia -->
+    <form action="{{ url_for('add_news') }}" method="post" class="formularios">
+        <div class="inputs_cadastro">
+            <!-- Campo para inserir o título da notícia -->
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+            <br><br>
+
+            <!-- Campo para selecionar a categoria da notícia -->
+            <label for="news_type">Escolha uma categoria:</label>
+            <select id="news_type" name="news_type" required>
+                {% for type in news_types %}
+                    <!-- Itera pelas categorias disponíveis para preenchê-las no dropdown -->
+                    <option value="{{ type }}">{{ type }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            
+            <!-- Campo para inserir a descrição da notícia -->
+            <label for="description">Descrição:</label>
+            <textarea id="description_add" name="description" required></textarea>
+            <br><br>
+            
+            <!-- Botão para submeter o formulário -->
+            <button type="submit" class="btn-cadastrar_noticia">Cadastrar Notícia</button>
+        </div>
+    </form>
+    
+    <!-- Link para retornar à página inicial -->
+    <div>
+        <a href="{{ url_for('index') }}" class="btn">Voltar para Home</a>
+    </div>
+</div>
+{% endblock %}

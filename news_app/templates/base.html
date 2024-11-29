@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante que a página seja responsiva -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Link para o arquivo CSS -->
+    <title>Notícias</title> <!-- Título da página exibido na aba do navegador -->
+</head>
+
+<body>
+    
+ <!-- Menu hambúrguer para navegação mobile -->
+    <div id="menu-hamburger" onclick="toggleMenu()">
+        <img src="static/fotos/menu.png" alt="Menu" class="hamburger"/>
+    </div>
+
+    <!-- Cabeçalho do site -->
+    <header>
+        <ul>
+            <!-- Exibe a logo -->
+            <li id="imagem_logo">
+                <img src="{{ url_for('static', filename='fotos/Logo.png') }}" alt="Logo" class="logo">
+            </li>
+            <!-- Link para cadastrar uma nova notícia -->
+            <li id="cadastrar">
+                <a href="{{ url_for('add_news') }}" class="btn-cadastrar">CADASTRAR NOTÍCIA</a>
+            </li>
+            <!-- Link para cadastrar uma nova categoria de notícia -->
+            <li id="tipos">
+                <a href="{{ url_for('type_news') }}" class="btn-cadastrar">CADASTRAR CATEGORIA</a>
+            </li>
+            <!-- Formulário de busca -->
+            <li id="buscas">
+                <form action="/" method="get"> <!-- Realiza busca com o método GET -->
+                    <div class="input-container">
+                        <input type="text" name="query"> <!-- Campo de entrada para busca -->
+                        <button type="submit" class="btn-busca">
+                            <!-- Ícone de lupa no botão de busca -->
+                            <img src="{{ url_for('static', filename='fotos/buscar.png') }}" alt="Buscar" class="lupa">
+                        </button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="main-content">
+        {% block content %} <!-- Bloco para conteúdo dinâmico definido em páginas específicas -->
+        {% endblock %}
+    </main>
+ 
+    <!-- Rodapé do site -->
+    <footer>
+        <p>DESENVOLVIDO EM 2024 PELO 
+            <a href="https://github.com/FabioDODG" target="_blank">PROGRAMADOR</a>
+        </p> <!-- Exibe o link do meu git -->
+    </footer>
+    
+    <!-- Link para o arquivo JavaScript -->
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
